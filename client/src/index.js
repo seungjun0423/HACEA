@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import axios from 'axios';
 
 // 스토어 임포트
-import Store from './Ducks/Store/Store';
+import Store from './Redux/Store/Store';
 
 axios.defaults.withCredentials = true ;
 
