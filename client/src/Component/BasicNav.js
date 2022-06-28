@@ -20,7 +20,7 @@ import { Fragment } from 'react';
 
 const Div = styled.div`
   width: 100vw;
-  height: 3.22em;
+  height: 3.8em;
   text-align: center;
   vertical-align: middle;
   position: fixed;
@@ -42,7 +42,11 @@ return (
         <Div>
           <Navbar key='xxl'  expand='xxl'className="mb-3" fixed='top'>
           <Container fluid>
-            <Navbar.Brand href="/">훌라로 떠나는 하와이 여행</Navbar.Brand>
+            <Navbar.Brand href="/">
+              <h2>훌라 그리고 하와이</h2>
+            </Navbar.Brand>
+            <span>하와이와 관련된 모든것</span>
+
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-xxl`} />
             <Navbar.Offcanvas id={`offcanvasNavbar-expand-xxl`} aria-labelledby={`offcanvasNavbarLabel-expand-xxl`} placement="end">
 
@@ -54,13 +58,19 @@ return (
 
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="/talk">게시판</Nav.Link>
+                <Nav.Link href="/introduce">소개</Nav.Link>
+                <Nav.Link href="/shop">쇼핑하기</Nav.Link>
                 <Nav.Link href="/lecture">강의실</Nav.Link>
+                <NavDropdown title="커뮤니티" id={`offcanvasNavbarDropdown-expand-xxl`}>
+                  <NavDropdown.Item href="#action4">1</NavDropdown.Item>
+                  <NavDropdown.Item href="#action5">2</NavDropdown.Item>
+                </NavDropdown>
                 <NavDropdown title="함께하는 사람들" id={`offcanvasNavbarDropdown-expand-xxl`}>
                   <NavDropdown.Item href="#action3">할라우</NavDropdown.Item>
                   <NavDropdown.Item href="#action4">선생님1</NavDropdown.Item>
                   <NavDropdown.Item href="#action5">선생님2</NavDropdown.Item>
                 </NavDropdown>
+                <Nav.Link href="/"> 교류하기</Nav.Link>
                 <Nav.Link onClick={()=>{dispatch(modal(!modalState));console.log(modalState)}} >로그인</Nav.Link>
                 </Nav>
               </Offcanvas.Body>

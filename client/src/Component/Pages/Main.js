@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
 `
-const Div = styled.div`
+const Div = styled.span`
   position:fixed;
   bottom:10em;
 `
@@ -37,6 +37,7 @@ function Main(){
               {modalState? <Modal></Modal> : null}
             </Div>
           <Back src={tree}></Back>
+          <Back src={flower}></Back>
           </Wrapper>
     )
 }
