@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 // 카카오 로그인 버튼
 
 // img
-import kakao from '../../images/kakao.png'
+import kakao from '../../Images/Oauth/kakao.png'
 
 const Button = styled.div`
   width: 16em;
