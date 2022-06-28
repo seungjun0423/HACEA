@@ -1,9 +1,11 @@
 // 모듈 임포트
-import React from 'react'
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 // 컴포넌트 임포트
-import Nav from './Component/Nav'
+import Nav from './Component/BasicNav';
 import Footer from './Component/Footer';
 import Main from './Component/Pages/Main'
 
