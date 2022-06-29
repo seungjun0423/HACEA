@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     border-color: #EBEBEB;
-    display: flex;
+    display: grid;
     align-self: center;
     justify-content: center;
   }

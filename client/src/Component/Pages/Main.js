@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 
 // 컴포넌트 임포트
 import Modal from '../Atoms/Modal'
+import Slider from '../Atoms/Slider'
 
 // 이미지 임포트
 import flower from '../../Images/Hawaii/Flower.png'
@@ -24,10 +25,6 @@ const Div = styled.span`
   position:fixed;
   bottom:10em;
 `
-const Back = styled.img`
-  width:100%;
-  height:100%;
-`
 
 function Main(){
   const modalState = useSelector((state)=>state.modal.modal)
@@ -36,8 +33,7 @@ function Main(){
             <Div>
               {modalState? <Modal></Modal> : null}
             </Div>
-          <Back src={tree}></Back>
-          <Back src={flower}></Back>
+            <Slider></Slider>
           </Wrapper>
     )
 }

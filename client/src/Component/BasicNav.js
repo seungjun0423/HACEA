@@ -1,5 +1,6 @@
 // 모듈 임포트
 import styled from "styled-components"
+import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import {useSelector, useDispatch } from 'react-redux'
 
@@ -14,22 +15,29 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 
 // 컴포넌트 임포트
 import Madal from './Atoms/Modal';
+import Slider from './Atoms/Slider';
 
+// 액션 임포트
 import {modal} from '../Redux/Slice/ModalSlice'
-import { Fragment } from 'react';
 
 const Div = styled.div`
-  width: 100vw;
-  height: 3.8em;
+  position: fixed;
+  width: 120%;
+  height: 3.7em;
   text-align: center;
   vertical-align: middle;
-  position: fixed;
   background-color: #fff;
   display: flex;
-  box-sizing: border-box;
-  justify-content: center;
-  align-items:center;
+  z-index:1000000;
 `
+
+const Div2 = styled.div`
+  display: flex;
+  position: fixed;
+  top: 0.4em;
+  right: 0;
+`
+
 
 
 export default function BasicNav() {
@@ -38,29 +46,30 @@ export default function BasicNav() {
   console.log(modalState)
 
 return (
-  <Fragment>
+      <Fragment>
         <Div>
-          <Navbar key='xxl'  expand='xxl'className="mb-3" fixed='top'>
+          <Div2>
+          <Navbar key='xxl'  expand='xxl'className="mb-3" fixed='top' >
           <Container fluid>
             <Navbar.Brand href="/">
               <h2>훌라 그리고 하와이</h2>
             </Navbar.Brand>
-            <span>하와이와 관련된 모든것</span>
 
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-xxl`} />
-            <Navbar.Offcanvas id={`offcanvasNavbar-expand-xxl`} aria-labelledby={`offcanvasNavbarLabel-expand-xxl`} placement="end">
+            <Navbar.Offcanvas id={`offcanvasNavbar-expand-xxl`} aria-labelledby={`offcanvasNavbarLabel-expand-xxl`} placement="end" >
 
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-xxl`}>
-                  Offcanvas
+              <Offcanvas.Header closeButton >
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-xxl`} >
+                  Menu
                 </Offcanvas.Title>
               </Offcanvas.Header>
 
-              <Offcanvas.Body>
+              <Offcanvas.Body >
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="/introduce">소개</Nav.Link>
+                <Nav.Link href="/introtuction" >소개</Nav.Link>
                 <Nav.Link href="/shop">쇼핑하기</Nav.Link>
                 <Nav.Link href="/lecture">강의실</Nav.Link>
+
                 <NavDropdown title="커뮤니티" id={`offcanvasNavbarDropdown-expand-xxl`}>
                   <NavDropdown.Item href="#action4">1</NavDropdown.Item>
                   <NavDropdown.Item href="#action5">2</NavDropdown.Item>
@@ -77,6 +86,7 @@ return (
             </Navbar.Offcanvas>
           </Container>
         </Navbar>
+        </Div2>
       </Div>
       </Fragment>
   );

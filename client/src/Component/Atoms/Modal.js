@@ -15,6 +15,8 @@ import {modal} from '../../Redux/Slice/ModalSlice'
 const Div = styled.div`
   display:flex;
   justify-content:center;
+  box-sizing:content-box;
+  z-index:2;
 `
 
 export default function BasicMadal() {
