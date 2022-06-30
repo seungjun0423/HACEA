@@ -33,7 +33,7 @@ function Main(){
             <Div>
               {modalState? <Modal></Modal> : null}
             </Div>
-            <Slider></Slider>
+            
           </Wrapper>
     )
 }

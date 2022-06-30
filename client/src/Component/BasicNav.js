@@ -47,16 +47,16 @@ export default function BasicNav() {
 
 return (
       <Fragment>
-        <Div>
+        <Div >
           <Div2>
-          <Navbar key='xxl'  expand='xxl'className="mb-3" fixed='top' >
+          <Navbar key='xxl'  expand='xxl'className="mb-3" fixed='top'>
           <Container fluid>
             <Navbar.Brand href="/">
               <h2>훌라 그리고 하와이</h2>
             </Navbar.Brand>
 
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-xxl`} />
-            <Navbar.Offcanvas id={`offcanvasNavbar-expand-xxl`} aria-labelledby={`offcanvasNavbarLabel-expand-xxl`} placement="end" >
+            <Navbar.Offcanvas id={`offcanvasNavbar-expand-xxl`} aria-labelledby={`offcanvasNavbarLabel-expand-xxl`} placement="end">
 
               <Offcanvas.Header closeButton >
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-xxl`} >
