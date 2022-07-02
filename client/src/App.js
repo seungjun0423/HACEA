@@ -9,6 +9,7 @@ import Nav from './Component/BasicNav';
 import Footer from './Component/Footer';
 import Main from './Component/Pages/Main'
 import Modal from './Component/Atoms/Modal'
+import ItemListContainer from './Component/Pages/Shop';
 
 // 글로벌 스타일 임포트 
 import GlobalStyle from './GlobalStyle';

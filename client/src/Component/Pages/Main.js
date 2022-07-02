@@ -8,10 +8,6 @@ import Modal from '../Atoms/Modal'
 import Slider from '../Atoms/Slider'
 
 // 이미지 임포트
-import flower from '../../Images/Hawaii/Flower.png'
-import tree from '../../Images/Hawaii/Tree.png'
-import sunset from '../../Images/Hawaii/Sunset.png'
-import crown from '../../Images/Hawaii/FlowerCrown.png'
 
 
 const Wrapper = styled.div`
@@ -21,9 +17,12 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
 `
-const Div = styled.span`
+const Div = styled.div`
   position:fixed;
   bottom:10em;
+`
+const Div2 = styled.div`
+  width:100%;
 `
 
 function Main(){
@@ -33,7 +32,9 @@ function Main(){
             <Div>
               {modalState? <Modal></Modal> : null}
             </Div>
-            
+            <Div2>
+            <Slider></Slider>
+            </Div2>
           </Wrapper>
     )
 }

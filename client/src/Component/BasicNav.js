@@ -13,17 +13,16 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-// 컴포넌트 임포트
-import Madal from './Atoms/Modal';
-import Slider from './Atoms/Slider';
-
 // 액션 임포트
 import {modal} from '../Redux/Slice/ModalSlice'
+
+// 이미지 임포트
+import Hacea from '../Images/Logo/HACEA.svg'
 
 const Div = styled.div`
   position: fixed;
   width: 120%;
-  height: 3.7em;
+  height: 6em;
   text-align: center;
   vertical-align: middle;
   background-color: #fff;
@@ -40,6 +39,7 @@ const Div2 = styled.div`
 
 
 
+
 export default function BasicNav() {
   const modalState = useSelector((state)=>state.modal.modal)
   const dispatch = useDispatch()
@@ -52,7 +52,7 @@ return (
           <Navbar key='xxl'  expand='xxl'className="mb-3" fixed='top'>
           <Container fluid>
             <Navbar.Brand href="/">
-              <h2>훌라 그리고 하와이</h2>
+              <img src={Hacea}></img>
             </Navbar.Brand>
 
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-xxl`} />
@@ -67,7 +67,7 @@ return (
               <Offcanvas.Body >
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                 <Nav.Link href="/introtuction" >소개</Nav.Link>
-                <Nav.Link href="/shop">쇼핑하기</Nav.Link>
+                <Nav.Link href="/shop">쇼핑</Nav.Link>
                 <Nav.Link href="/lecture">강의실</Nav.Link>
 
                 <NavDropdown title="커뮤니티" id={`offcanvasNavbarDropdown-expand-xxl`}>
